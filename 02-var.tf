@@ -1,6 +1,6 @@
 variable     "sample" {
   default  = "hello world"
 }
-output "sample-op"    {
+output "sample-op" {
   value =var.sample
 }
