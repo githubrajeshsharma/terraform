@@ -1,5 +1,6 @@
 provider "aws" {
   region = "us-east-1"
+}
 
 resource "aws_instance" "sample" {
   ami           = "ami-02358d9f5245918a3"
@@ -13,4 +14,4 @@ resource "aws_instance" "sample" {
 output "private_ip" {
 value  = aws_instance.sample.private_ip
 }
-}
+
