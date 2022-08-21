@@ -1,9 +1,13 @@
-# Creates EC2
-resource "aws_instance" "b49-ec2" {
-  ami                     = "ami-052d9bac7baef4290"
-  instance_type           = "t3.micro"
+resource "aws_instance" "sample" {
+  ami           = "ami-02358d9f5245918a3"
+  instance_type = "t2.micro"
 
   tags = {
-    Name    = "my-first-ec2"
+    Name = "my first ec2 instance_type"
   }
 }
+
+output "private_ip" {
+value  = "aws_instance.sample.private_ip"
+}
+
