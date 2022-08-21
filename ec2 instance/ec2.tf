@@ -1,13 +1,10 @@
+# Creates EC2
 resource "aws_instance" "sample" {
-  ami           = "ami-02358d9f5245918a3"
-  instance_type = "t2.micro"
+  ami                     = "ami-00ff427d936335825"
+  instance_type           = "t3.micro"
+  vpc_security_group_ids  = [aws_security_group.allow_ssh.id]
 
   tags = {
-    Name = "my first ec2 instance_type"
+    Name    = "my-first-ec2"
   }
 }
-
-output "private_ip" {
-value  = "aws_instance.sample.private_ip"
-}
-
