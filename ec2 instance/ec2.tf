@@ -1,5 +1,5 @@
 resource "aws_instance" "terraform" {
-  ami           = i-099a9f588ad15acf2
+  ami           = "ami-02358d9f5245918a3"
   instance_type = "t2.micro"
 
   tags = {
