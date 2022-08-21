@@ -1,11 +1,12 @@
 resource "aws_instance" "terraform" {
   ami           = i-099a9f588ad15acf2
-  instance_type = "t3.micro"
+  instance_type = "t2.micro"
 
   tags = {
     Name = "my first ec2 instance_type"
   }
 }
-output ="private_ip" {
-value = aws_instance.terraform.private_ip
+
+output "privateip" {
+value  = aws_instance.terraform.privateip
 }
