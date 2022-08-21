@@ -7,6 +7,6 @@ resource "aws_instance" "terraform" {
   }
 }
 
-output "privateip" {
-value  = aws_instance.terraform.privateip
+output "private_ip" {
+value  = aws_instance.terraform.private_ip
 }
